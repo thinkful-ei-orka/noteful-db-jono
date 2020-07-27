@@ -25,7 +25,7 @@ notesRouter
     })
     .post(jsonParser, (req, res, next) => {
         const { name, content, folderId } = req.body
-        const newNote = { name, content, folderId }
+        const newNote = { name, content, folderid:folderId }
 
         for(const [key, value] of Object.entries(newNote)) {
             if (value == null) {
